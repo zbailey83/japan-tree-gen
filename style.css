@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  background: #fffbed;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: monospace;
+    color: #000;
+    padding: 10px;
+    font-size: 12px;
+}
+/* -------------------------------------- */
+.leaf {
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow: 0px 0px 2px 0px rgb(255, 255, 255);
+}
+.fruit {
+	background-color: #e66e4a;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 4px 1px rgb(255, 102, 0);
+	z-index: 1;
+}
+body {
+	overflow: hidden;
+}
+body::after {
+	content: "";
+	display: block;
+	width: 80vh;
+	height: 80vh;
+	max-height: 100vw;
+	max-width: 100vw;
+	background-color: #2a574d;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 10%;
+	border-radius: 50%;
+	z-index: -1;
+	clip-path: circle(150% at 50% 218%);
+}
+body::before {
+	content: "";
+	display: block;
+	width: 80vh;
+	height: 80vh;
+	max-height: 100vw;
+	max-width: 100vw;
+	background-color: #9dbeb7;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 10%;
+	border-radius: 50%;
+	z-index: -2;
+}
+
+/* easy cloud from NANOUU : https://codepen.io/antoniasymeonidou/pen/BawKMqg */
+#cloud {
+	background: rgb(255, 255, 255);
+	width: 300px; 
+	height: 100px;
+	border-radius: 150px;	
+	box-shadow: 10px 10px rgba(0,0,0,0.2);
+	animation: move 16s ease-in-out infinite;
+	position: absolute;
+	top: 0;
+	bottom: 20%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: -1;
+	opacity: 0.5;
+}
+#cloud:nth-child(2) {
+ animation-delay: -4s;
+ bottom: 10%;
+ scale: 0.7;
+}
+  #cloud:after {
+	content: '';
+	background: rgba(255, 255, 255);
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	top: -50px;
+	left: 50px;
+  }
+  
+  #cloud:before {
+	content: '';
+	background: rgba(255, 255, 255);
+	position: absolute;
+	width: 170px;
+	height: 150px;
+	border-radius: 50%;
+	top: -90px;
+	right: 40px;
+  }
+  
+  @keyframes move {
+	0% {
+	  transform: translatex(-100px);
+	}
+	50% {
+	  transform: translatex(100px);
+	}
+	100% {
+		transform: translatex(-100px);
+	}
+  }
+button {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	font-size: 14px;
+	padding: 8px 12px;
+	border: none;
+	border-radius: 4px;
+	background-color:#2a574dcc;
+	color: #fff;
+}
+button:hover {
+	background-color:#2a574d;
+}
